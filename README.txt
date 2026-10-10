@@ -1,5 +1,8 @@
 COURTSIDE — USER GUIDE
 
+OPEN THE ONLINE APP
+https://goatbollox.github.io/courtside-playbook/
+
 MAC AND WINDOWS
 Unzip the transfer file and open Courtside.html in a current Chrome, Edge,
 Safari or Firefox browser. No installation is required. Drawing and saved
@@ -62,6 +65,11 @@ requirement. Players do not need GitHub or a login. Once the website is
 published, creating ordinary play links does not need a GitHub login.
 Offline drawing, saving, importing and exporting do not need GitHub.
 The online viewer must remain published for team links to continue working.
+To publish updates from another laptop, link/sign into the GitHub account
+with access to this repository:
+https://github.com/Goatbollox/courtside-playbook
+The existing website and normal team links keep working without linking
+GitHub on each laptop.
 
 KEYBOARD
 V Select; C Cut; D Dribble; P Pass; S Screen; T Text; E Erase.
