@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Shared play · Courtside</title>
+  <link rel="stylesheet" href="viewer.css">
+  <script defer src="model.js"></script>
+  <script defer src="share-codec.js"></script>
+  <script defer src="viewer.js"></script>
+</head>
+<body>
+  <header class="masthead"><a class="brand" href="./" aria-label="Courtside coach editor"><span class="brand-mark" aria-hidden="true">C</span>COURTSIDE</a><span class="badge">Shared play · View only</span></header>
+  <main>
+    <section id="loading" class="message" role="status"><span class="eyebrow">TEAM PLAYBOOK</span><h1>Opening your play…</h1></section>
+    <section id="error" class="message" hidden><span class="eyebrow">SHARED PLAY</span><h1>This play link cannot be opened.</h1><p id="error-copy"></p><a class="button" href="./">Open Courtside</a></section>
+    <div id="viewer" hidden>
+      <div class="title-row"><div><span class="eyebrow" id="play-meta"></span><h1 id="play-title"></h1></div><span class="read-only">Watch. Learn. Run it.</span></div>
+      <div class="viewer-grid">
+        <section class="court-card" aria-label="Play animation">
+          <div class="court-top"><span id="court-kind">HALF COURT</span><span id="phase-label" class="phase-label"></span><button id="paths" class="quiet" aria-pressed="true">Show routes</button></div>
+          <div class="court-wrap"><svg id="court" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Basketball play court"></svg></div>
+          <div class="transport">
+            <div class="seek-row"><label class="sr-only" for="seek">Animation progress</label><input id="seek" type="range" min="0" max="1000" value="0" step="1"><output id="time-label" for="seek">0:00 / 0:00</output></div>
+            <div class="buttons"><button id="restart" class="control" aria-label="Restart animation" title="Restart">↤</button><button id="play" class="button play-button">▶ <span>Play</span></button><label class="speed-label" for="speed">Speed <select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label><button id="loop" class="control loop" aria-pressed="false">↻ <span>Loop</span></button></div>
+          </div>
+          <div class="legend" aria-label="Court symbols"><span><i class="offense">1</i> Offense</span><span><i class="defense">1</i> Defense</span><span><i class="ball"></i> Ball</span><span><svg viewBox="0 0 36 15" aria-hidden="true"><path d="M1 8h30m-5-5 5 5-5 5"/></svg> Cut</span><span><svg viewBox="0 0 36 15" aria-hidden="true"><path d="m1 8 5-3 5 6 5-6 5 6 5-3h6m-5-5 5 5-5 5"/></svg> Dribble</span><span><svg viewBox="0 0 36 15" aria-hidden="true"><path d="M1 8h30" stroke-dasharray="4 4"/><path d="m26 3 5 5-5 5"/></svg> Pass</span><span><svg viewBox="0 0 36 15" aria-hidden="true"><path d="M1 8h29M30 2v12"/></svg> Screen</span></div>
+        </section>
+        <aside class="coaching">
+          <section class="step-panel"><span class="eyebrow">THE SEQUENCE</span><div id="steps" class="steps" aria-label="Choose a step"></div></section>
+          <section class="notes-card" aria-live="polite" aria-atomic="true"><span class="eyebrow" id="step-number"></span><h2 id="step-title"></h2><p id="step-notes" class="notes-preview"></p><button id="expand-notes" class="expand-notes" aria-expanded="false" aria-controls="step-notes" hidden>Show full notes</button><div class="step-duration" id="step-duration"></div></section>
+          <p class="tip">Press play to see the movement. Tap a step to start there, or drag the timeline to look closer.</p>
+        </aside>
+      </div>
+      <footer><p>Anyone with this link can view this snapshot. Later edits need a new link.</p><button id="download" class="text-button">Download this play</button><span id="download-status" class="sr-only" role="status"></span></footer>
+    </div>
+  </main>
+  <noscript><p class="message">JavaScript is needed to open and animate this play. Enable it, then reopen the link.</p></noscript>
+</body>
+</html>
