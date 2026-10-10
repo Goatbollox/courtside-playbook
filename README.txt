@@ -18,7 +18,10 @@ acts. Editing an earlier step does not rewrite later steps automatically.
 THREE- TO FOUR-MINUTE ANIMATIONS WITH READING TIME
 Under Whole-play reading time choose 3 minutes or 4 minutes. This distributes
 the total time across your steps. Each step moves for up to 3 seconds, then
-holds the final positions while the coaching notes remain on screen.
+uses any remaining time to hold the final positions while notes stay on screen.
+With many steps, reading holds may be short or absent. The app warns when
+any hold is under 2 seconds; use fewer steps or longer step durations for
+longer notes. The preset does not estimate reading time from the text.
 Duration is the total time for the step; Movement time controls how long
 the players/ball move. The difference is reading time. You can change each
 step independently, up to 300 seconds per step. Use 1x playback speed for

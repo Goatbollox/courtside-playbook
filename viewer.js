@@ -38,7 +38,7 @@
     if(ball)html+=`<g transform="translate(${ball.x} ${ball.y})"><title>Ball</title><circle r="9" fill="#ef8b4d" stroke="#fffaf0" stroke-width="2"/><path d="M-8 0H8M0-8V8M-5-6q8 6 0 12" stroke="#9a4f2b" stroke-width="1" fill="none"/></g>`;
     return html;
   }
-  const formatTime=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
+  const formatTime=t=>{const seconds=Math.max(0,Math.floor(t+1e-7));return `${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}`;};
   function stop(){playing=false;cancelAnimationFrame(raf);$('#play').innerHTML='▶ <span>Play</span>';$('#play').setAttribute('aria-label','Play animation');}
   function showTime(){
     let index=play.frames.findIndex((f,i)=>time<offsets[i]+f.duration);
